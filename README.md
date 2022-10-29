@@ -8,17 +8,22 @@
 
 2. 実験
 
+3. 参考
+
 ## 実験準備
 pythonの環境に応じて，以下の3つから実験用の仮想環境構築とコードが動くか確認をお願いします．
 
+ちなみにコードをダウンロードする方法はgithubのページで，  
+<img width="800" alt="スクリーンショット 2022-10-29 15 13 47" src="https://user-images.githubusercontent.com/82089820/198816898-a9539a68-229a-44b0-a7d7-c5631480a5c2.png">  
+をクリックするとできます.
 ---
 
-###　pythonがよくわからない人
+### pythonがよくわからない人  
 
 Miniforgeを用いて，簡単にPython環境を構築していきます．
 
 0. Homebrewをインストールしていない場合には，Homebrewをインストール．  
-[Homebrew](https://brew.sh/index_ja)を参考にしてください．
+[こちら](https://brew.sh/index_ja)を参考にしてください．
 
 1. Miniforgeをインストール
 ```bash
@@ -48,7 +53,7 @@ $ conda info -e
 
 いろいろな仮想環境を作成している場合には，下記のように表示されます．  
 もし過去に同じ実験に参加している場合は，reaction_envという環境が作成されています．  
-その場合は，？番までとばしてOKです．
+その場合は，6番までとばしてOKです．
 ```bash
 # conda environments:
 #
@@ -279,7 +284,7 @@ $ conda activate reaction_env
 * pyenv, pyenv-virtualenvを使っている人はフォルダに移動するだけでOKです．
 
 **以下，どちらも共通です！**  
-パスの前に仮想環境名が表示されていればOKです！
+パスの前に仮想環境名が表示されていればOKです！  
 <img width="400" alt="スクリーンショット 2022-10-29 10 48 38" src="https://user-images.githubusercontent.com/82089820/198760567-48de42c9-2b34-4ca9-a32c-fd6e0501e6e9.png">
 
 #### 実験開始
@@ -339,3 +344,12 @@ dataフォルダをzipにして，slackもしくはgoogle driveにアップし�
 
 以上で実験を終了します．  
 ご協力ありがとうございました．
+
+
+## 参考
+- [M1 Macで機械学習やPythonはMiniforgeを使う](https://qiita.com/kujirahand/items/9bf1a1e7bd34bdb87da5)
+- [Mac/LinuxのPython環境構築をMiniForgeで行う理由](https://zenn.dev/karaage0703/articles/f3254b14898b4d)
+- [Anacondaでbaseが自動的にactivateされるのを防ぎたい](https://ja.stackoverflow.com/questions/61630/anaconda%E3%81%A7base%E3%81%8C%E8%87%AA%E5%8B%95%E7%9A%84%E3%81%ABactivate%E3%81%95%E3%82%8C%E3%82%8B%E3%81%AE%E3%82%92%E9%98%B2%E3%81%8E%E3%81%9F%E3%81%84)
+- [pyenvとpyenv-virtualenvの自分流使い方](https://qiita.com/ksato9700/items/5d9eba10fe6b8e064178)
+- [pyenv 利用のまとめ](https://qiita.com/m3y/items/45c7be319e401b24fca8)
+- [pyenv をinstallした後に python not foundとなる問題](https://zenn.dev/ymd/articles/68ed58e45ea275)
