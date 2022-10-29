@@ -139,3 +139,104 @@ task-1: csvへの書き込みを完了しました
 <img width="500" alt="スクリーンショット 2022-10-29 11 07 16" src="https://user-images.githubusercontent.com/82089820/198767798-9bc2276d-92f2-4504-afd3-75ec409e4a5f.png">
 
 実験本番まで，フォルダなどは削除しないようにお願いします．
+
+### conda
+1. まずはコードをクローンもしくはzipをダウンロードしてください．  
+クローンもしくはダウンロードしたらフォルダまで移動をお願いします.(vscodeで開いてもOKです．)  
+<img width="300" alt="スクリーンショット 2022-10-29 10 48 46" src="https://user-images.githubusercontent.com/82089820/198760360-5270c4a6-5b18-4cf8-a0af-4a2977a7c5b1.png">
+
+2. まずは仮想環境を確認します．
+```bash
+$ conda info -e
+```
+
+いろいろな仮想環境を作成している場合には，下記のように表示されます．  
+もし過去に同じ実験に参加している場合は，reaction_envという環境が作成されています．  
+その場合は，？番までとばしてOKです．
+```bash
+# conda environments:
+#
+base                  *  /Users/koya/miniforge3
+drf-env                  /Users/koya/miniforge3/envs/drf-env
+gtts                     /Users/koya/miniforge3/envs/gtts
+workout_app_env          /Users/koya/miniforge3/envs/workout_app_env
+workout_record_venv      /Users/koya/miniforge3/envs/workout_record_venv
+```
+
+3. 新しく仮想環境を作成します．以下を実行してください．
+```bash
+$ conda create -n reaction_env python=3.8.13
+```
+
+4. 次に仮想環境に入ります．実験用のフォルダにいることを確認して，以下を実行してくさい.
+```bash
+$ conda activate reaction_env
+```
+すると，パスの前に仮想環境名が表示されると思います．  
+以下のようになっていればOKです．  
+<img width="400" alt="スクリーンショット 2022-10-29 10 48 38" src="https://user-images.githubusercontent.com/82089820/198760567-48de42c9-2b34-4ca9-a32c-fd6e0501e6e9.png">
+
+5. 必要なライブラリをインストールします．
+```bash
+$ conda install -c anaconda numpy
+$ conda install -c anaconda pandas
+$ conda install -c conda-forge/label/cf202003 psutil
+$ conda install -c anaconda pyaudio
+$ conda install -c conda-forge/label/cf202003 pyobjc-framework-quartz
+```
+
+6. コードが動くか確認．  
+main.pyを実行します．
+```bash
+$ python main.py
+```
+
+次に名前を入力して，enterを押します．
+```bash
+$ 名前を入力してください(例：山田 >> yamada) : namba
+```
+
+次にマイクの番号を選択します．  
+外部マイクを使っている場合には，外部マイクを選択してください．  
+それ以外の場合は，MacBook Proのマイクを選択してください．  
+```bash
+0 EV2785
+1 BlackHole 16ch
+2 BlackHole 2ch
+3 外部マイク
+4 外部ヘッドフォン
+5 MacBook Proのマイク
+6 MacBook Proのスピーカー
+7 Microsoft Teams Audio
+8 ZoomAudioDevice
+9 機器セット
+$ マイクのデバイス番号を整数で入力してください: 3
+```
+
+下記のように表示されれば問題ないです．  
+finishを入力して，実行を終了してください．
+```bash
+task-1: csvへの書き込みを始めます
+--------------------------------------------------
+終了する場合にはfinishを入力してください
+$ Please input(finish): finish
+```
+
+以下のように表示されれば問題ないです．
+```bash
+task-1: csvへの書き込みを完了しました
+--------------------------------------------------
+すべてのプロセスが正常に終了しました
+```
+
+最後にreaction_experimentフォルダの中のdataフォルダにcsvファイルが保存されているか確認してください．  
+<img width="300" alt="スクリーンショット 2022-10-29 10 47 33" src="https://user-images.githubusercontent.com/82089820/198760880-bc149fdf-a0d8-4b07-811c-b9236378b821.png">
+
+これで実験準備は終了です．
+以下のコマンドを実行すると仮想環境から抜けられます．
+```bash
+conda deactivate
+```
+<img width="623" alt="スクリーンショット 2022-10-29 14 28 34" src="https://user-images.githubusercontent.com/82089820/198815568-08aef2e9-1fdb-4e1f-92c3-7bb58c1ce131.png">
+
+実験本番まで，フォルダや仮想環境は削除しないでください．
