@@ -1,0 +1,5 @@
+numpy==1.22.1
+pandas==1.3.5
+psutil==5.9.0
+PyAudio==0.2.11
+pyobjc-framework-Quartz==8.2
