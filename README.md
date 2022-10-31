@@ -481,3 +481,4 @@ dataフォルダをzipにして，slackもしくはgoogle driveにアップし�
 - [pyenvとpyenv-virtualenvの自分流使い方](https://qiita.com/ksato9700/items/5d9eba10fe6b8e064178)
 - [pyenv 利用のまとめ](https://qiita.com/m3y/items/45c7be319e401b24fca8)
 - [pyenv をinstallした後に python not foundとなる問題](https://zenn.dev/ymd/articles/68ed58e45ea275)
+- [【初心者向け】Anacondaで仮想環境を作ってみる](https://qiita.com/ozaki_physics/items/985188feb92570e5b82d)
