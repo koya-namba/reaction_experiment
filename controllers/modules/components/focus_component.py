@@ -2,7 +2,6 @@ from AppKit import NSWorkspace
 import numpy as np
 import pandas as pd
 import psutil
-import pyaudio
 from Quartz import (
     CGWindowListCopyWindowInfo,
     kCGWindowListOptionOnScreenOnly,
