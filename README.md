@@ -42,7 +42,7 @@ pythonのバージョンが ~~3.8.5(2022/10/30)~~ 3.7.0以上3.10.7以下なら�
 $ pip install numpy==1.22.1
 $ pip install pandas==1.3.5
 $ pip install psutil==5.9.0
-$ pip install PyAudio==0.2.11
+$ pip install PyAudio==0.2.11(インストールしなくて大丈夫です)
 $ pip install pyobjc-framework-Quartz==8.2
 ```
 
@@ -143,7 +143,7 @@ $ conda activate reaction_env
 $ conda install -c anaconda numpy
 $ conda install -c anaconda pandas
 $ conda install -c conda-forge/label/cf202003 psutil
-$ conda install -c anaconda pyaudio
+$ conda install -c anaconda pyaudio(インストールしなくて大丈夫です)
 $ conda install -c conda-forge/label/cf202003 pyobjc-framework-quartz
 ```
 
@@ -277,7 +277,7 @@ $ pyenv local reaction_env
 $ pip install numpy==1.22.1
 $ pip install pandas==1.3.5
 $ pip install psutil==5.9.0
-$ pip install PyAudio==0.2.11
+$ pip install PyAudio==0.2.11(インストールしなくて大丈夫です)
 $ pip install pyobjc-framework-Quartz==8.2
 ```
 
@@ -343,7 +343,7 @@ task-1: csvへの書き込みを完了しました
   - numpy==1.22.1
   - pandas==1.3.5
   - psutil==5.9.0
-  - PyAudio==0.2.11
+  - PyAudio==0.2.11(インストールしなくて大丈夫です)
   - pyobjc-framework-Quartz==8.2
 
 仮想環境に入って動作を確認してください．

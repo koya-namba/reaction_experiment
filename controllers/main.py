@@ -6,15 +6,14 @@ from controllers.modules.change_flag import ChangeFlag
 from controllers.modules.input_init_value import InputInitValue
 from controllers.modules.write_csv import WriteCsv
 
-def main(afk_threshold, audio_threshold, write_cycle):
+
+def main(afk_threshold, write_cycle):
     """
     メイン実行．
     Parameters
     ----------
     afk_threshold: int
         AFK判定の時間閾値．
-    audio_threshold: int
-        話しているかを判断する音量閾値．
     write_cycle: int
         CSVファイルに書き込む時間間隔．
     Returns
@@ -22,7 +21,7 @@ def main(afk_threshold, audio_threshold, write_cycle):
     
     """
     # インプット関数から名前とマイク番号を取得
-    name, mic_device_number = InputInitValue.main()
+    name = InputInitValue.main()
     
     # 終了フラグスレッド
     manager = Manager()
@@ -32,8 +31,10 @@ def main(afk_threshold, audio_threshold, write_cycle):
         args=(flag,)
         )
 
-    write_csv = WriteCsv(name, write_cycle, mic_device_number, afk_threshold, audio_threshold)
+    # csvファイルへの書き込み
+    write_csv = WriteCsv(name, write_cycle, afk_threshold)
 
+    # プロセス開始
     change_flag_thread.start()
     write_csv.main(flag)
     change_flag_thread.join()
